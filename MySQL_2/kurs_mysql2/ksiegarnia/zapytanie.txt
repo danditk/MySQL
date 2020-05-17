@@ -1,1 +1,14 @@
-SELECT * FROM ksiazki
+
+
+
+
+
+-- SELECT k.imie, k.nazwisko, z.idzamowienia, z.data FROM klienci AS k, zamowienia AS z
+-- WHERE k.idklienta = z.idklienta
+-- Można stosować aliasy i potem opisywać je nadając im nazwę, np: klienci AS k
+-- =
+-- SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data FROM klienci, zamowienia
+-- WHERE klienci.idklienta = zamowienia.idklienta ORDER BY imie
+-- Opisano relacje w powtarzającej się bazie - to konieczność!
+-- DESC OR ASC LIMIT 1 - sortowanie od do / do od / ograniczenie wyników do 1 pozycji
+-- WHERE nazwa LIKE "%PHP%" % - znak dowolny, napis w cudzysłowie!
