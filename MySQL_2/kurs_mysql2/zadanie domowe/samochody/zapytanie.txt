@@ -1,0 +1,35 @@
+-- 10.
+SELECT a.marka, a.model FROM auta AS a, klienci AS kl, wypozyczenia AS w
+WHERE kl.nazwisko = "pastewniak" AND w.idklienta = kl.idklienta AND w.idauta = a.idauta
+
+-- 9.
+-- SELECT auta.marka, auta.model FROM auta, wypozyczenia AS w
+-- WHERE w.idklienta = 4 AND auta.idauta = w.idauta
+
+-- 8.
+-- SELECT kl.imie FROM klienci AS kl, wypozyczenia AS w
+-- WHERE w.idauta = 1 AND w.idklienta = kl.idklienta
+
+-- 7.
+-- SELECT auta.idauta, auta.marka, auta.model FROM auta, wypozyczenia AS w
+-- WHERE w.idauta = auta.idauta ORDER BY w.datawyp ASC LIMIT 1
+
+-- 6.
+-- SELECT auta.marka, auta.model FROM auta ORDER BY ubezpieczenie DESC LIMIT 1
+
+-- 5.
+-- SELECT kl.imie, kl.nazwisko FROM klienci AS kl
+-- Where kl.miasto = "katowice" AND kl.adres LIKE "%rolna%"
+
+-- 4.
+-- SELECT * FROM auta WHERE auta.idauta > 1 AND auta.idauta < 5
+
+-- 3.
+-- SELECT * FROM auta WHERE auta.marka = "ford"
+
+-- 2.
+-- SELECT * FROM auta WHERE auta.rocznik = 2010
+
+-- 1.
+-- SELECT kl.imie, kl.nazwisko FROM klienci AS kl
+-- WHERE kl.idklienta = 4

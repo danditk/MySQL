@@ -1,0 +1,33 @@
+
+-- ALL BY MYself :)
+SELECT kl.imie, kl.nazwisko, z.idzamowienia, z.data, z.status, ks.tytul FROM klienci AS kl, zamowienia AS z, ksiazki AS ks
+WHERE kl.nazwisko = "rutkowski" AND z.idklienta = kl.idklienta AND z.idksiazki = ks.idksiazki ORDER BY data ASC
+
+-- SELECT ks.tytul, ks.imieautora, ks.nazwiskoautora FROM zamowienia AS z, ksiazki AS ks, klienci AS kl
+-- WHERE kl.imie = "jan" AND kl.nazwisko = "nowak" AND ks.idksiazki = z.idksiazki AND z.idklienta = kl.idklienta
+
+-- SELECT ks.tytul, ks.imieautora, ks.nazwiskoautora FROM zamowienia AS z, ksiazki AS ks
+-- WHERE z.idklienta = 2 AND ks.idksiazki = z.idksiazki
+
+-- SELECT kl.imie, kl.nazwisko, ks.tytul  FROM klienci AS kl, zamowienia AS z, ksiazki AS ks
+-- WHERE z.idksiazki = 2 AND z.idklienta = kl.idklienta AND z.idksiazki = ks.idksiazki
+
+
+-- SELECT k.imie, k.nazwisko, z.idzamowienia, z.data FROM klienci AS k, zamowienia AS z
+-- WHERE k.idklienta = z.idklienta ORDER BY data DESC
+
+-- SELECT k.imie, k.nazwisko, z.idzamowienia, z.data FROM klienci AS k, zamowienia AS z,
+-- WHERE k.idklienta = z.idklienta
+
+
+
+
+-- SELECT k.imie, k.nazwisko, z.idzamowienia, z.data FROM klienci AS k, zamowienia AS z
+-- WHERE k.idklienta = z.idklienta
+-- Można stosować aliasy i potem opisywać je nadając im nazwę, np: klienci AS k
+-- =
+-- SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data FROM klienci, zamowienia
+-- WHERE klienci.idklienta = zamowienia.idklienta ORDER BY imie
+-- Opisano relacje w powtarzającej się bazie - to konieczność!
+-- DESC OR ASC LIMIT 1 - sortowanie od do / do od / ograniczenie wyników do 1 pozycji
+-- WHERE nazwa LIKE "%PHP%" % - znak dowolny, napis w cudzysłowie!
